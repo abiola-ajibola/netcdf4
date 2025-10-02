@@ -213,7 +213,7 @@ void Variable::WriteSlice(const v8::FunctionCallbackInfo<v8::Value>& args) {
         delete[] size;
         return;
     }
-    int retval = nc_put_vara(obj->parent_id, obj->id, pos, size, val->Buffer()->GetContents().Data());
+    int retval = nc_put_vara(obj->parent_id, obj->id, pos, size, val->Buffer()->Data());
     if (retval != NC_NOERR) {
         throw_netcdf_error(isolate, retval);
     }

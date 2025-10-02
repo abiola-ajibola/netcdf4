@@ -81,7 +81,7 @@ void Attribute::GetValue(v8::Local<v8::String> property, const v8::PropertyCallb
             if (len == 1) {
                 info.GetReturnValue().Set(v8::Integer::New(isolate, v[0]));
             } else {
-                info.GetReturnValue().Set(v8::Int8Array::New(v8::ArrayBuffer::New(isolate, v, len * 1), 0, len));
+                info.GetReturnValue().Set(v8::Int8Array::New(v8::ArrayBuffer::New(isolate, len * 1), 0, len));
             }
             delete[] v;
         } break;
@@ -91,7 +91,7 @@ void Attribute::GetValue(v8::Local<v8::String> property, const v8::PropertyCallb
             if (len == 1) {
                 info.GetReturnValue().Set(v8::Integer::New(isolate, v[0]));
             } else {
-                info.GetReturnValue().Set(v8::Int16Array::New(v8::ArrayBuffer::New(isolate, v, len * 2), 0, len));
+                info.GetReturnValue().Set(v8::Int16Array::New(v8::ArrayBuffer::New(isolate, len * 2), 0, len));
             }
             delete[] v;
         } break;
@@ -101,7 +101,7 @@ void Attribute::GetValue(v8::Local<v8::String> property, const v8::PropertyCallb
             if (len == 1) {
                 info.GetReturnValue().Set(v8::Integer::New(isolate, v[0]));
             } else {
-                info.GetReturnValue().Set(v8::Int32Array::New(v8::ArrayBuffer::New(isolate, v, len * 4), 0, len));
+                info.GetReturnValue().Set(v8::Int32Array::New(v8::ArrayBuffer::New(isolate, len * 4), 0, len));
             }
             delete[] v;
         } break;
@@ -111,7 +111,7 @@ void Attribute::GetValue(v8::Local<v8::String> property, const v8::PropertyCallb
             if (len == 1) {
                 info.GetReturnValue().Set(v8::Number::New(isolate, v[0]));
             } else {
-                info.GetReturnValue().Set(v8::Float32Array::New(v8::ArrayBuffer::New(isolate, v, len * 4), 0, len));
+                info.GetReturnValue().Set(v8::Float32Array::New(v8::ArrayBuffer::New(isolate, len * 4), 0, len));
             }
             delete[] v;
         } break;
@@ -121,7 +121,7 @@ void Attribute::GetValue(v8::Local<v8::String> property, const v8::PropertyCallb
             if (len == 1) {
                 info.GetReturnValue().Set(v8::Number::New(isolate, v[0]));
             } else {
-                info.GetReturnValue().Set(v8::Float64Array::New(v8::ArrayBuffer::New(isolate, v, len * 8), 0, len));
+                info.GetReturnValue().Set(v8::Float64Array::New(v8::ArrayBuffer::New(isolate, len * 8), 0, len));
             }
             delete[] v;
         } break;
@@ -131,7 +131,7 @@ void Attribute::GetValue(v8::Local<v8::String> property, const v8::PropertyCallb
             if (len == 1) {
                 info.GetReturnValue().Set(v8::Integer::New(isolate, v[0]));
             } else {
-                info.GetReturnValue().Set(v8::Uint8Array::New(v8::ArrayBuffer::New(isolate, v, len * 1), 0, len));
+                info.GetReturnValue().Set(v8::Uint8Array::New(v8::ArrayBuffer::New(isolate, len * 1), 0, len));
             }
             delete[] v;
         } break;
@@ -141,7 +141,7 @@ void Attribute::GetValue(v8::Local<v8::String> property, const v8::PropertyCallb
             if (len == 1) {
                 info.GetReturnValue().Set(v8::Integer::New(isolate, v[0]));
             } else {
-                info.GetReturnValue().Set(v8::Uint16Array::New(v8::ArrayBuffer::New(isolate, v, len * 2), 0, len));
+                info.GetReturnValue().Set(v8::Uint16Array::New(v8::ArrayBuffer::New(isolate, len * 2), 0, len));
             }
             delete[] v;
         } break;
@@ -151,7 +151,7 @@ void Attribute::GetValue(v8::Local<v8::String> property, const v8::PropertyCallb
             if (len == 1) {
                 info.GetReturnValue().Set(v8::Integer::NewFromUnsigned(isolate, v[0]));
             } else {
-                info.GetReturnValue().Set(v8::Uint32Array::New(v8::ArrayBuffer::New(isolate, v, len * 4), 0, len));
+                info.GetReturnValue().Set(v8::Uint32Array::New(v8::ArrayBuffer::New(isolate, len * 4), 0, len));
             }
             delete[] v;
         } break;
@@ -161,7 +161,7 @@ void Attribute::GetValue(v8::Local<v8::String> property, const v8::PropertyCallb
             if (len == 1) {
                 info.GetReturnValue().Set(v8::Integer::New(isolate, static_cast<int32_t>(v[0])));
             } else {
-                info.GetReturnValue().Set(v8::Int32Array::New(v8::ArrayBuffer::New(isolate, v, len * 8), 0, len));
+                info.GetReturnValue().Set(v8::Int32Array::New(v8::ArrayBuffer::New(isolate, len * 8), 0, len));
             }
             delete[] v;
         } break;
@@ -171,7 +171,7 @@ void Attribute::GetValue(v8::Local<v8::String> property, const v8::PropertyCallb
             if (len == 1) {
                 info.GetReturnValue().Set(v8::Integer::NewFromUnsigned(isolate, static_cast<uint32_t>(v[0])));
             } else {
-                info.GetReturnValue().Set(v8::Uint32Array::New(v8::ArrayBuffer::New(isolate, v, len * 8), 0, len));
+                info.GetReturnValue().Set(v8::Uint32Array::New(v8::ArrayBuffer::New(isolate, len * 8), 0, len));
             }
             delete[] v;
         } break;
